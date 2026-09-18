@@ -247,7 +247,19 @@ export default function HomePage() {
 
       {/* ===== Hero ===== */}
       <section ref={heroRef} className="relative min-h-[100svh] flex items-end overflow-hidden">
-        <motion.img style={{ y: heroY, scale: heroScale }} src="/images/hero-river-view.png" alt="Земельные участки с высоты" className="absolute inset-0 w-full h-full object-cover will-change-transform" />
+        {/* Видео-hero как на сайте покупателей; при reduced-motion — статичный постер */}
+        <motion.video
+          style={{ y: heroY, scale: heroScale }}
+          className="absolute inset-0 w-full h-full object-cover will-change-transform"
+          src="/video/hero.mp4"
+          poster="/video/hero-poster.jpg"
+          autoPlay={!reduce}
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-label="Аэровидео земельных участков"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-[#141312]/95 via-[#141312]/55 to-[#141312]/15" />
 
         {/* фоновый вордмарк */}

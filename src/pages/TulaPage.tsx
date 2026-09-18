@@ -9,6 +9,7 @@ interface TulaObject {
   id: string
   name: string
   fullName: string
+  region: string
   location: string
   image: string
   mapUrl: string
@@ -30,6 +31,7 @@ const tulaObjects: TulaObject[] = [
     id: 'shekinskie',
     name: 'Щекинские берега',
     fullName: 'ЩЕКИНСКИЕ БЕРЕГА',
+    region: 'Тульская область',
     location: 'Тульская область, с. Костромарово',
     image: '/images/tula-bg.jpg',
     mapUrl: 'https://yandex.ru/maps/?pt=37.4,54.1&z=12&l=sat',
@@ -49,6 +51,7 @@ const tulaObjects: TulaObject[] = [
     id: 'kraenka',
     name: 'Краенка',
     fullName: 'КРАЕНКА',
+    region: 'Тульская область',
     location: 'Тульская область, дер. Краенка',
     image: '/images/tula-bg.jpg',
     mapUrl: 'https://yandex.ru/maps/?pt=36.340898,54.106868&z=15&l=sat',
@@ -62,6 +65,46 @@ const tulaObjects: TulaObject[] = [
       documentsClient: '',
       documentsAgent: '',
       photos: 'https://disk.yandex.ru/d/0LutE9MajGAX6g'
+    }
+  },
+  {
+    id: 'svetlaya-dolina',
+    name: 'Светлая долина',
+    fullName: 'СВЕТЛАЯ ДОЛИНА',
+    region: 'Тверская область',
+    location: 'Тверская область, р-н Ржевский',
+    image: '/images/tver-bg.jpg',
+    mapUrl: 'https://yandex.ru/maps/?pt=34.5,56.2&z=12&l=sat',
+    buttons: {
+      presentation: 'https://disk.yandex.ru/d/0FcURhVsl9jMkQ',
+      tour3d: '',
+      chess: 'https://disk.yandex.ru/d/_bA0jHhzuMWOjg',
+      renders: 'https://disk.yandex.ru/d/r1JgHzfbfx8iUA',
+      layouts: 'https://disk.yandex.ru/d/OQIj3TKbDJTlIQ',
+      profitability: '/installment/tver',
+      documentsClient: 'https://disk.yandex.ru/d/ymbuRYnn8R0EYw',
+      documentsAgent: 'https://disk.yandex.ru/d/ymbuRYnn8R0EYw',
+      photos: 'https://disk.yandex.ru/d/NuE37AQZJvehDg'
+    }
+  },
+  {
+    id: 'serebryanye-prudy',
+    name: 'Серебряные пруды',
+    fullName: 'СЕРЕБРЯНЫЕ ПРУДЫ',
+    region: 'Московская область',
+    location: 'Московская область, Серебряные Пруды',
+    image: '/images/moscow-bg.jpg',
+    mapUrl: 'https://yandex.ru/maps/?pt=38.83,54.44&z=12&l=sat',
+    buttons: {
+      presentation: 'https://disk.yandex.ru/d/wj0Sn3Si-c6f6g',
+      tour3d: 'https://partners.gektar.expert/tour/silverlake/',
+      chess: 'https://disk.yandex.ru/d/9qcBLKJh5BjZQA',
+      renders: 'https://disk.yandex.ru/d/bLLEDs7oXq8OdA',
+      layouts: 'https://disk.yandex.ru/d/LH6TWvl_Se22Gw',
+      profitability: '/installment/moscow',
+      documentsClient: 'https://disk.yandex.ru/d/wj0Sn3Si-c6f6g',
+      documentsAgent: 'https://disk.yandex.ru/d/wj0Sn3Si-c6f6g',
+      photos: 'https://disk.yandex.ru/d/ha8A5e2vpn_DzQ'
     }
   },
 ]
@@ -87,7 +130,7 @@ export default function TulaPage() {
   const [selected, setSelected] = useState(tulaObjects[0])
   const b = selected.buttons
   usePageMeta(
-    `${selected.fullName} — Тульская область · ЗемФонд`,
+    `${selected.fullName} — ${selected.region} · ЗемФонд`,
     `${selected.fullName}: ${selected.location}. Презентация, шахматка, генплан, документы и запись на просмотр.`
   )
 
