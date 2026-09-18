@@ -78,7 +78,7 @@ export default function ProfitabilityPage() {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <a href="/" className="flex items-center gap-3">
-            <img src="/images/logo.png" alt="Гектарь" className="h-12 w-auto" />
+            <img src="/images/logo.png" alt="ЗемФонд" className="h-12 w-auto" />
           </a>
           <a
             href="/"
@@ -231,7 +231,7 @@ export default function ProfitabilityPage() {
       {/* Footer */}
       <footer className="bg-[#050505] text-white py-12 px-6 border-t border-[#a08050]/20">
         <div className="max-w-7xl mx-auto text-center">
-          <img src="/images/logo.png" alt="Гектарь" className="h-16 w-auto mx-auto mb-6" />
+          <img src="/images/logo.png" alt="ЗемФонд" className="h-16 w-auto mx-auto mb-6" />
           <p className="text-white/50 mb-4">
             Развитие территорий
           </p>
@@ -239,7 +239,7 @@ export default function ProfitabilityPage() {
             Вернуться на главную
           </a>
           <p className="text-white/30 mt-8 text-sm">
-            © 2024 Гектарь. Все права защищены.
+            © 2026 ЗемФонд. Все права защищены.
           </p>
         </div>
       </footer>

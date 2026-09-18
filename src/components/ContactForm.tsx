@@ -20,7 +20,7 @@ export default function ContactForm() {
   const [error, setError] = useState('')
 
   const sendToTelegram = async () => {
-    const message = `🆕 Новая заявка с сайта Гектарь
+    const message = `🆕 Новая заявка с партнёрского сайта ЗемФонд
 
 🏢 Агентство: ${formData.agencyName}
 👤 Агент: ${formData.agentName}
@@ -89,7 +89,7 @@ ${formData.objectDetails || 'Не указано'}
       })
 
       // Отправка письма через mailto
-      const mailtoLink = `mailto:Gektar.RF@yandex.com?subject=Новая заявка с сайта Гектарь&body=
+      const mailtoLink = `mailto:Gektar.RF@yandex.com?subject=Новая заявка с партнёрского сайта ЗемФонд&body=
 Название агентства: ${encodeURIComponent(formData.agencyName)}%0A
 ФИО Агента: ${encodeURIComponent(formData.agentName)}%0A
 Контакты агента: ${encodeURIComponent(formData.agentContact)}%0A
@@ -119,14 +119,14 @@ ${formData.objectDetails || 'Не указано'}
   if (isSubmitted) {
     return (
       <div className="bg-white rounded-3xl p-8 text-center shadow-2xl">
-        <div className="w-16 h-16 bg-[#1f6f44]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-          <Check className="w-8 h-8 text-[#1f6f44]" />
+        <div className="w-16 h-16 bg-[#b98a2e]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <Check className="w-8 h-8 text-[#b98a2e]" />
         </div>
         <h3 className="text-2xl font-semibold text-[#1d1d1f] mb-3">Заявка отправлена</h3>
         <p className="text-[#6e6e73] mb-7">Мы свяжемся с вами в ближайшее время.</p>
         <button
           onClick={() => setIsSubmitted(false)}
-          className="bg-[#1f6f44] hover:bg-[#1a5e3a] text-white px-6 py-3 rounded-full font-medium transition-colors"
+          className="bg-[#b98a2e] hover:bg-[#a67b26] text-white px-6 py-3 rounded-full font-medium transition-colors"
         >
           Отправить ещё одну заявку
         </button>
@@ -135,7 +135,7 @@ ${formData.objectDetails || 'Не указано'}
   }
 
   const inputClass =
-    "w-full bg-[#f5f5f7] border border-transparent focus:border-[#1f6f44]/40 focus:bg-white rounded-2xl px-4 py-3 text-[15px] text-[#1d1d1f] placeholder:text-[#86868b] outline-none transition-colors"
+    "w-full bg-[#f5f5f7] border border-transparent focus:border-[#b98a2e]/40 focus:bg-white rounded-2xl px-4 py-3 text-[15px] text-[#1d1d1f] placeholder:text-[#86868b] outline-none transition-colors"
   const labelClass = "flex items-center gap-2 text-[13px] font-medium text-[#6e6e73] mb-2"
 
   return (
@@ -238,7 +238,7 @@ ${formData.objectDetails || 'Не указано'}
             id="consent"
             checked={formData.consent}
             onChange={(e) => setFormData({ ...formData, consent: e.target.checked })}
-            className="mt-0.5 w-5 h-5 accent-[#1f6f44]"
+            className="mt-0.5 w-5 h-5 accent-[#b98a2e]"
           />
           <label htmlFor="consent" className="text-[#6e6e73] text-[13px] leading-relaxed">
             Я даю согласие на обработку персональных данных
@@ -252,7 +252,7 @@ ${formData.objectDetails || 'Не указано'}
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-[#1f6f44] hover:bg-[#1a5e3a] disabled:opacity-50 text-white py-4 rounded-full font-medium transition-colors flex items-center justify-center gap-2"
+          className="w-full bg-[#b98a2e] hover:bg-[#a67b26] disabled:opacity-50 text-white py-4 rounded-full font-medium transition-colors flex items-center justify-center gap-2"
         >
           <Send className="w-5 h-5" />
           {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
