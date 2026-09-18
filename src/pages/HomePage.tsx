@@ -66,7 +66,7 @@ const lands = [
     type: 'ЛПХ',
     price: '25 000 000 ₽',
     count: 'единый лот',
-    image: '/images/crimea-plan.png',
+    image: '/images/crimea-photo.jpg',
     link: '/crimea',
   },
 ]
