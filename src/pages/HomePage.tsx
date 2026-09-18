@@ -54,7 +54,7 @@ const lands = [
     type: 'Садоводство',
     price: 'от 425 000 ₽',
     count: '32 участка',
-    image: '/images/moscow-plan.png',
+    image: '/images/moscow-photo.jpg',
     link: '/moscow',
   },
   {
